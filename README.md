@@ -194,3 +194,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 For any queries or support, please contact:
 
 Email: boukemoucheidriss@gmail.com
+
+Jangan Lupa jika di windows Aktifkan mode Developer
+
