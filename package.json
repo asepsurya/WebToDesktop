@@ -1,10 +1,13 @@
+
 {
-  "name": "WebToDesk",
+  "name": "Tidessa",
   "version": "1.0.0",
-  "description": "Convert Website to Desktop application",
+  "description": "Aplikasi Management Tidessa",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:win:portable": "electron-builder --win portable"
   },
   "author": "Idriss Boukmouche",
   "license": "CC0-1.0",
@@ -13,8 +16,30 @@
     "electron-builder": "^24.13.3"
   },
   "build": {
+    "appId": "com.tidessa.app",
+    "productName": "Tidessa",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
     "mac": {
       "category": "public.app-category.utilities"
     }
   }
 }
+
